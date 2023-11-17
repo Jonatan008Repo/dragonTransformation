@@ -1,3 +1,4 @@
+//* Autor: Jonatan Vergara Escobar
 $(function () {
     incremn = incremn2 = 30;
     pos = 0;
@@ -24,7 +25,6 @@ $(function () {
             x2: pos, y2: 600
         });
         pos = pos + incremn;
-
         $('#lienzo1').drawLine({
             layer: true,
             strokeStyle: '#000',
@@ -52,13 +52,6 @@ $(function () {
         x: posOriginesX, y: posOriginesY,
         scale: 0.1
     });
-    //$('#lienzo1').animateLayer('dragon', {
-    //}, 1000, function (layer) {
-    //    $('#lienzo1').animateLayer(layer, {
-    //        x: 250, y: 100, rotate: 360
-    //    }, 'slow', 'swing');
-    //});
-
     if (typeof (Storage) !== "undefined") {
         if (localStorage.getItem("lastRecord") === null) {
             localStorage.setItem("lastRecord", 0);
@@ -69,7 +62,6 @@ $(function () {
     } else {
         //console.log("error lastRecord");
     }
-
     $("#mover").click(function () {
         moverFrente();
         checkPosDragon();
@@ -144,7 +136,6 @@ $(function () {
         checkPosDragon();
         $(".historia").prepend("<img src='images/INV_HORIZONTAL.png' width='20' />");
     });
-
     $("#explor").click(function () {
         recPlay();
         $("#reflejo").on("click");
@@ -168,9 +159,7 @@ $(function () {
         recPlay();
         isSombra = true;
         insert(posOriginesX, posOriginesX, rotateOrigines, scalX, scalY, 'dragon');
-
         //console.log("sombra");
-
         $("#reflejo").slideUp("slow").removeClass('opa');
         $("#reflejo2").slideUp("slow").removeClass('opa');
         sombraS();
@@ -189,7 +178,6 @@ $(function () {
         espxS = 0.1;
         //espy = Math.floor(Math.random() * espejo.length);
         espyS = 0.1;
-
         insert(xpS, ypS, aNGs, espxS, espyS, 'dragonS');
         console.log("xpS:" + xpS + " ypS:" + ypS);
         console.log("anguloR:" + anguloR + " el angulo es:" + angulos[anguloR]);
@@ -271,7 +259,6 @@ $(function () {
                                 });
                             }
                         }
-
                         if ((posOriginesX < pasoA || posOriginesX > limite) || (posOriginesY < pasoA || posOriginesY > limite)) {
                             vivo = false;
                             clearInterval(intervalId);

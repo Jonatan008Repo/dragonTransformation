@@ -1,152 +1,124 @@
-﻿html, body {
-    height: 100%;
-    background-image: url("../../images/FONDO1.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden;
+﻿html,
+body {
+	height: 100%;
+	background-image: url("../../images/FONDO1.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
-
 .main {
-    position: relative;
+	position: relative;
 }
-
 .mycanvas canvas {
-    background-color: rgba(255, 255, 255, 0.83);
-    border: 10px solid rgba(147, 214, 91, 0.87);
-    width: 100%;
+	background-color: rgba(255, 255, 255, 0.83);
+	border: 10px solid rgba(147, 214, 91, 0.87);
+	width: 100%;
 }
-
 .historia {
-    border: 1px solid #faf6de;
-    background-color: #596ab0;
-    height: 50px;
-    overflow-y: scroll;
+	border: 1px solid #faf6de;
+	background-color: #596ab0;
+	height: 50px;
+	overflow-y: scroll;
 }
-
 .menu {
 }
-
-    .menu button {
-        width: 100%;
-    }
-
+.menu button {
+	width: 100%;
+}
 .control {
-    position: relative;
-    bottom: 25px;
+	position: relative;
+	bottom: 25px;
 }
-
-    .control img {
-        /*padding: 5%;*/
-        /*width: 80%;*/
-    }
-
-    .control .col-xs-2 {
-        padding: 0;
-    }
-
+.control img {
+}
+.control .col-xs-2 {
+	padding: 0;
+}
 .opa {
-    opacity: 0.5;
+	opacity: 0.5;
 }
-
 .intro {
-    /*background-image: url("../../images/FONDO1.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;*/
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	position: absolute;
 }
-
-    .intro .intro-fondo {
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        right: 0px;
-        position: absolute;
-    }
-
-    .intro .btn-Inicio {
-        position: fixed;
-        width: 90%;
-        bottom: 0px;
-        z-index: 200;
-        padding: 15%;
-    }
-
-    .intro .intro-titulo {
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        padding: 10%;
-    }
-
-    .intro .intro-dragon {
-        position: fixed;
-        right: 0px;
-        top: 15%;
-        width: 75%;
-    }
-
-    .intro .intro-huevos {
-        position: fixed;
-        left: 0px;
-        top: 50%;
-        width: 60%;
-    }
-
+.intro .intro-fondo {
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	right: 0px;
+	position: absolute;
+}
+.intro .btn-Inicio {
+	position: fixed;
+	width: 90%;
+	bottom: 0px;
+	z-index: 200;
+	padding: 15%;
+}
+.intro .intro-titulo {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	padding: 10%;
+}
+.intro .intro-dragon {
+	position: fixed;
+	right: 0px;
+	top: 15%;
+	width: 75%;
+}
+.intro .intro-huevos {
+	position: fixed;
+	left: 0px;
+	top: 50%;
+	width: 60%;
+}
 .modal {
-    /*background-color: rgba(48, 105, 173, 0.43);*/
 }
-
-    .modal .imgmodal {
-        width: 130px;
-    }
-
-    .modal .modal-content {
-        background-color: #630179;
-        font-size: smaller;
-        color: white;
-    }
-
-    .modal .modal-body {
-        background-color: rgba(194, 67, 222, 0.57);
-    }
-
-    .modal .nav > li > a {
-        padding: 5px 10px;
-        background-color: #630179;
-        color: white;
-        text-align: center;
-        text-wrap: normal;
-    }
-
-@media(width: 768px) {
-    .mycanvas {
-        width: 70%;
-        padding-left: 15;
-    }
+.modal .imgmodal {
+	width: 130px;
 }
-
-@media(width: 320px) {
-    .mycanvas {
-        width: 80%;
-        padding-left: 10;
-    }
+.modal .modal-content {
+	background-color: #630179;
+	font-size: smaller;
+	color: white;
 }
-
-@media (orientation:landscape) {
-    html, body {
-        height: 100%;
-        background-image: url("../../images/horizontal.png");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    .gamet {
-        visibility: hidden;
-    }
+.modal .modal-body {
+	background-color: rgba(194, 67, 222, 0.57);
+}
+.modal .nav > li > a {
+	padding: 5px 10px;
+	background-color: #630179;
+	color: white;
+	text-align: center;
+	text-wrap: normal;
+}
+@media (width: 768px) {
+	.mycanvas {
+		width: 70%;
+		padding-left: 15;
+	}
+}
+@media (width: 320px) {
+	.mycanvas {
+		width: 80%;
+		padding-left: 10;
+	}
+}
+@media (orientation: landscape) {
+	html,
+	body {
+		height: 100%;
+		background-image: url("../../images/horizontal.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	.gamet {
+		visibility: hidden;
+	}
 }
