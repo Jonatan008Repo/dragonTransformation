@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/Style.css" rel="stylesheet" />
+    <link href="sweetalert/sweetalert2.css" rel="stylesheet" />
+    <script src="sweetalert/sweetalert2.js"></script>
+    <title>Transformaciones</title>
+</head>
+<body>
+    <div class="gamet">
+        <div class="container intro">
+            <img src="images/FONDO1.jpg" class="bounceIn intro-fondo img-responsive" />
+            <img src="images/JUEGO_DRAG_LOGO.png" class="bounceIn intro-titulo" />
+            <img src="images/ttDRAGON.png" class="bounceIn intro-dragon" />
+            <img src="images/huevoS.png" class="bounceIn intro-huevos" />
+            <img id="btnInicio" src="images/INICIAR.png" class="btn-Inicio" />
+        </div>
+        <div class="main">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img src="images/JUEGO_DRAG_LOGO.png" class="img-responsive" />
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-2">
+                    <img id="logro" src="images/trofeo.png" class="img-responsive" />
+                </div>
+                <div class="col-xs-2"></div>
+
+                <div class="col-xs-2">
+                    <img src="images/TUTORIAL.png" class="img-responsive" data-toggle="modal" data-target="#myModal" />
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+            <div class="row menu">
+                <div class="col-xs-4">
+                    <div id="explor">
+                        <img src="images/Explorador.png" class="img-responsive" />
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="sombra">
+                        <img src="images/Sombra.png" class="img-responsive" />
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="comer">
+                        <img src="images/Comer.png" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mycanvas center-block">
+                    <canvas id="lienzo1" class="img-responsive" width="600" height="600"></canvas>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <div class="row control">
+            <div class="col-xs-1"></div>
+
+            <div class="col-xs-2">
+                <div id="rotar2">
+                    <img src="images/BTN_IZQ.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="reflejo">
+                    <img src="images/INV_VERTICAL.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="mover">
+                    <img src="images/BTN_FRENTE.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="reflejo2">
+                    <img src="images/INV_HORIZONTAL.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="rotar">
+                    <img src="images/BTN_DER.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <div class="historia"></div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Transformaciones isométricas</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Modo<br />Explorador</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Modo <br /> Sombra</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Modo <br /> Comer</a></li>
+                    </ul>
+                    <br />
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+
+                            <p>Presiona uno de los botones para realizar la acción correspondiente, cuida no salir del borde de la cuadrícula. Se presenta en la pantalla el historial de botones seleccionados.</p>
+                            <p><strong>Comandos para el dragón (botones)</strong></p>
+                            <h4>Traslación:</h4>
+                            <div class="row">
+                                <div class="col-xs-3"><img src="images/BTN_FRENTE.png" class="img-responsive"></div>
+                                <div class="col-xs-8 ">
+                                    <p>
+                                        El dragón avanza una unidad hacia el frente, es decir, en donde está observando.
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Rotación 90º :</h4>
+                            <div class="row">
+                                <div class="col-xs-3"><img src="images/BTN_DER.png" class="img-responsive" /></div>
+                                <div class="col-xs-8">
+                                    <p>
+                                        La figura del dragón gira a la izquierda 90 grados.
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Rotación –90º:</h4>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images/BTN_IZQ.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <p>
+                                        La figura del dragón gira a la derecha 90 grados.
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Reflexión respecto a <i>Y</i> :</h4>
+                            <div class="row">
+                                <div class="col-xs-3"><img src="images/INV_VERTICAL.png" class="img-responsive" /></div>
+                                <div class="col-xs-8">
+                                    <p>
+                                        Se refleja la imagen del dragón horizontalmente, es decir, que el dragón ve hacia el lado opuesto.
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Reflexión respecto a <i>X</i>:</h4>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images/INV_HORIZONTAL.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <p>
+                                        Se refleja la imagen verticalmente, es decir, que el dragón va a ponerse de cabeza si está de pie, y de pie, si está de cabeza.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+
+                            <p>Se presentará una sombra del dragón en algún punto al azar de la cuadrícula, con alguna posición aleatoria también.</p>
+                            <p>
+                                <img src="images/dragonS.png" class="imgmodal img-responsive" />
+                                Tienes que hacer las transformaciones adecuadas para conseguir posicionar al dragón en el lugar donde se encuentra su sombra.
+                            </p>
+                            <p>Se presenta en la pantalla el historial de botones seleccionados en el proceso para ayudarte.</p>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <p> Aparece una chocolate aleatoriamente en algún punto de la cuadrícula.</p>
+                            <p> Sólo estarán disponibles los botones de traslación y los dos de rotación.</p>
+                            <p> El dragón se va a mover todo el tiempo hacia delante, a menos que lo rotes.</p>
+                            <p> Si haces que el dragón se coma le chocolate, le aparecerá un huevo que seguirá los movimientos del dragón.</p>
+                            <div class="row">
+                                <div class="col-xs-3"></div>
+                                <div class="col-xs-3">
+                                    <img src="images/cacao.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images/huevo.png" class="img-responsive" />
+                                </div>
+                            </div>
+                            <p>El juego terminará si el dragón toca la pared o embiste sus huevos.</p>
+                            <p> Por cada chocolate que comas se te sumarán 100 puntos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/jcanvas.js"></script>
+    <script src="bootstrap/js/plano.js"></script>
+</body>
+</html>
